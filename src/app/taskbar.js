@@ -1,4 +1,9 @@
+'use client'
+import { useState } from "react"
+
 export default function Taskbar(){
+
+    const [menuOpen, setMenuOpen] = useState(false)
 
     let barStyle = {
         backgroundColor: "white",
