@@ -3,7 +3,8 @@ export default function Menu(){
     let menuStyle = {
         width: "20%",
         height: "100%",
-        backgroundColor: "white"
+        backgroundColor: "white",
+        boxShadow: "-20px black"
     }
 
     return(

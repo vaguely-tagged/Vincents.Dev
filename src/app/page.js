@@ -15,13 +15,16 @@ export default function Page() {
     height: "20vw",
     padding: "10px",
     position: "relative",
-    left: "15%"
+    left: "0%",
+    padding: "10px"
   }
 
   let descriptionStyle = {
     float: "right",
     padding: "10px",
-    fontSize: "2vw"
+    fontSize: "2vw",
+    position: "relative",
+    top: "30%"
   }
 
   let titleStyle = {
@@ -29,17 +32,26 @@ export default function Page() {
     padding: "10px"
   }
 
-  return(
+  let gridSstyle = {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr"
+  }
+
+  return (
     <div>
-      <Taskbar/>
+      <Taskbar />
 
-      <div style={titleStyle} className={tinos.className}>Develop</div>
+      <div style={titleStyle} className={tinos.className}>Develop.</div>
 
-      <div style={splineStyle}>
-        <SplineModel/>
+      <div style={gridSstyle}>
+
+        <div style={splineStyle}>
+          <SplineModel />
+        </div>
+
+        <div style={descriptionStyle} className={tinos.className}> A self scaling personal blog and resume{"\n"}hosted on a k8 cluster</div>
       </div>
 
-      <div style={descriptionStyle} className={tinos.className}> A self scaling personal blog and resume{"\n"}hosted on a k8 cluster</div>
     </div>
   )
 }
